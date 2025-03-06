@@ -1,29 +1,27 @@
-# Documentation: Dockerized Node.js App
+# 📘 Dockerized Node.js App Documentation
 
-## Overview
-This project is a simple Node.js application that uses Express to serve a "Hello, Dockerized Node.js App!" message. The app is containerized using Docker for easy deployment and scalability.
+## 🏗 Overview
+This project is a simple Node.js application that uses Express to serve a "Hello, Dockerized Node.js App!" message. The application is containerized using Docker, making it easy to deploy and scale.
 
-## Prerequisites
+## 🔧 Prerequisites
 Before getting started, ensure you have the following installed on your system:
 
-- 🟢 **Node.js** 
-- 📦 **npm** 
-- 🐳 **Docker** 
+- **Node.js** 
+- **Docker** 
 
-## Project Structure
+## 📂 Project Structure
 ```
 my-node-app/
 ├── app.js               # Main application file
 ├── Dockerfile           # Docker configuration file
-├── .dockerignore        # Files to ignore in Docker build
 ├── package.json         # Node.js dependencies and scripts
 └── README.md            # Project documentation (this file)
 ```
 
-## Setup Instructions
+## 🚀 Setup Instructions
 
-
-### 1. 📦 Install Dependencies
+ 
+### 1️⃣ Install Dependencies
 Install the required Node.js dependencies:
 
 ```bash
@@ -31,45 +29,51 @@ npm install
 ```
 ![Alt text](pic1.png)
 
-### 3. 🚀 Run the App Locally
+### 2️⃣ Run the App Locally
 To run the app without Docker:
 
-```bash
-node app.js
-```
 Visit **http://localhost:3000** 
 
 ![Alt text](pic2.png)
 
-## Docker Setup
+## 🐳 Docker Setup
 
-### 1. 🏗️ Build the Docker Image
+### 1️⃣ Build the Docker Image
 Build the Docker image for the Node.js app:
 
 ```bash
- docker build -t lab1-docker .
- ```
-
-### 2. ▶️ Run the Docker Container
-Run the container and map port 9000 on my host to port 3000 in the container:
-
-```bash
-docker run -p 9000:3000 my-node-app
+FROM node:18
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["node","app.js"]
 ```
+![Alt text](pic3.png)
+
+### 2️⃣ Create a New Bridge Network
+To ensure network isolation and facilitate communication between containers, create a new Docker bridge network:
+
+![Alt text](pic4.png)
+
+### 3️⃣ Run the Docker Container Inside the Network
+Run the container within the newly created bridge network:
+
+![Alt text](pic5.png)
+
 Visit **http://localhost:9000** to access the app.
 
-![Alt text](pic2.png)
+![Alt text](pic7.png)
 
-### 3. ⏹️ Stop the Container
-To stop the running container, find the container ID using:
+### 4️⃣ Stop the Container
+To stop the running container, first find its container ID using:
 
-```bash
-docker ps
-```
-Then stop the container:
+![Alt text](pic6.png)
 
-```bash
-docker stop <container-id>
-```
+Then, stop the container with remove:
+
+![Alt text](pic8.png)
+
 
 
