@@ -4,7 +4,6 @@
 This project is a simple Node.js application that uses Express to serve a "Hello, Dockerized Node.js App!" message. The application is containerized using Docker, making it easy to deploy and scale.
 
 ## 🔧 Prerequisites
-Before getting started, ensure you have the following installed on your system:
 
 - **Node.js** 
 - **Docker** 
@@ -18,9 +17,7 @@ my-node-app/
 └── README.md            # Project documentation (this file)
 ```
 
-## 🚀 Setup Instructions
-
- 
+## 🚀 Setup Instructions 
 ### 1️⃣ Install Dependencies
 Install the required Node.js dependencies:
 
