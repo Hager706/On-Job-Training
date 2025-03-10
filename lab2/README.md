@@ -121,7 +121,7 @@ docker-compose up --build -d
 
 ### **Access the Application**  
 
-- **PHP Web App**: Open **`http://localhost:8080`** in your browser.  
+- **PHP Web App**: Open **`http://localhost:8080`** in browser.  
 - **phpMyAdmin**: Open **`http://localhost:8081`** and log in with:  
   - **Username**: `myuser`  
   - **Password**: `mypassword`  
@@ -160,15 +160,6 @@ volumes:
 ### **2️⃣ Database Management (phpMyAdmin)**  
 ✅ **Access phpMyAdmin at http://localhost:8081.**  
 ✅ **Manage the mydatabase and view the users table.**  
-
----
-
-## **8. Next Steps & Enhancements**  
-Want to extend the project? Here are some ideas:  
-
-- **Create a CRUD app** – Add a form to insert, update, delete, and view records.  
-- **Use a `.env` file** – Store database credentials securely.  
-- **Deploy on a cloud platform** – Run the app on **AWS, Azure, or Google Cloud**.  
 
 ---
 
