@@ -144,16 +144,11 @@ kubectl apply -f hello-world-ingress.yaml
 ```bash
 kubectl get ingress hello-world-ingress
 ```
-
-#### 🌍 Configure DNS
-
-Find the external IP or hostname assigned to the ingress and update your DNS settings to point `sub_domain.<your-name>.com` to this IP or hostname.
-
 ---
 
 ## 🌐 Accessing the Application
 
-Once DNS is configured, access the application via:
+access the application via:
 
 ```
 curl -H "Host: sub-domain.hagertarek.com" http://198.96.95.206

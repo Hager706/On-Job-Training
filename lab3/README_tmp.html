@@ -470,11 +470,9 @@ code {
 <h4 id="%F0%9F%94%8D-verify-the-ingress">🔍 Verify the Ingress</h4>
 <pre class="hljs"><code><div>kubectl get ingress hello-world-ingress
 </div></code></pre>
-<h4 id="%F0%9F%8C%8D-configure-dns">🌍 Configure DNS</h4>
-<p>Find the external IP or hostname assigned to the ingress and update your DNS settings to point <code>sub_domain.&lt;your-name&gt;.com</code> to this IP or hostname.</p>
 <hr>
 <h2 id="%F0%9F%8C%90-accessing-the-application">🌐 Accessing the Application</h2>
-<p>Once DNS is configured, access the application via:</p>
+<p>access the application via:</p>
 <pre class="hljs"><code><div>curl -H &quot;Host: sub-domain.hagertarek.com&quot; http://198.96.95.206
 </div></code></pre>
 <p><img src="file:///Users/macbook/Desktop/On-Job-Training/lab3/pic1.png" alt="Alt text"></p>
